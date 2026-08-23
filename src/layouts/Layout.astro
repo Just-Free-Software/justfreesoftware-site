@@ -1,0 +1,87 @@
+---
+interface Props {
+    title?: string;
+}
+
+const { title = "Just Free Software" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <style is:global>
+            html,
+            body {
+                background-color: #121212;
+                color: #ffffff;
+                font-family: sans-serif;
+            }
+            a {
+                color: #88a7fd;
+            }
+            a:visited {
+                color: #f490fd;
+            }
+            a:active {
+                color: #88a7fd;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="0" cellpadding="10" cellspacing="0" width="100%">
+            <tr>
+                <!-- Sidebar Column -->
+                <td
+                    style={{
+                        verticalAlign: "top",
+                        width: "200px",
+                        borderRight: "1px solid currentColor",
+                        paddingRight: "20px",
+                    }}
+                >
+                    <h3>Just Free Software</h3>
+                    <p><a href="/">Welcome</a></p>
+
+                    <!-- Free Blocker Collapsable Dropdown -->
+                    <details open>
+                        <summary
+                            style="cursor: pointer; font-weight: bold; margin-top: 10px; margin-bottom: 5px;"
+                            >Free Blocker</summary
+                        >
+                        <div style="padding-left: 15px; margin-bottom: 10px;">
+                            <p style="margin: 5px 0;">
+                                <a href="/free-blocker/info">Info</a>
+                            </p>
+                            <p style="margin: 5px 0;">
+                                <a href="/free-blocker/privacy-policy"
+                                    >Privacy Policy</a
+                                >
+                            </p>
+                        </div>
+                    </details>
+
+                    <hr />
+                    <p>
+                        <a href="mailto:justfreesoftwarema@gmail.com">Email</a>
+                    </p>
+                    <p>
+                        <a
+                            href="https://github.com/Just-Free-Software"
+                            target="_blank">GitHub</a
+                        >
+                    </p>
+                </td>
+                <!-- Content Column -->
+                <td valign="top" style="padding-left: 20px;">
+                    <slot />
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
