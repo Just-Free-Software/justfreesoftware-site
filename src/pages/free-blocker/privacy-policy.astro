@@ -2,25 +2,124 @@
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Free Blocker Privacy Policy">
-    <h1>Free Blocker Privacy Policy</h1>
+<Layout title="Just Block Privacy Policy">
+    <h1>Just Block Privacy Policy</h1>
+    <p>
+        <em>Last updated: September 15, 2026</em>
+    </p>
 
-    <p>Free Blocker does not collect any user data.</p>
-    <p>As such, we do not sell, share, transfer, or store any app user data.</p>
     <p>
-        Our app stores your configurations on the local storage of your device.
+        Just Block ("the App") is a DNS-based ad and tracker blocking
+        application. We are committed to keeping the App private and minimizing
+        the information it handles.
+    </p>
+
+    <h2>Information We Collect</h2>
+    <p>
+        Just Block does not collect, store, or sell personal information about
+        its users.
     </p>
     <p>
-        Our app runs a local VPN on your device. The app does not connect to any
-        servers owned by us.
+        We do not operate servers that receive or store information from the
+        App, and we do not use analytics, advertising SDKs, or user accounts.
+    </p>
+
+    <h2>VPN and DNS Traffic</h2>
+    <p>
+        Just Block uses Android's <code>VpnService</code> API to create a local
+        VPN connection on your device. The VPN is used to inspect and process
+        network traffic for the purpose of DNS-based blocking.
     </p>
     <p>
-        Our app connects to the 3rd party DNS server - AdGuard (94.140.14.14).
-        Please visit their privacy policies for more information:
-        <a href="https://adguard.com/en/privacy.html"></a>
+        DNS queries are processed locally by the App. Just Block does not store
+        your DNS queries or browsing history.
     </p>
     <p>
-        Our app allows users to configure URLS from which to download 3rd party
-        blocklist files. Use this feature at your own risk.
+        To resolve DNS queries, the App sends them to AdGuard's default DNS
+        server at
+        <code>94.140.14.14</code>. We chose AdGuard as it is a popular
+        privacy-oriented DNS provider that supports DNS over QUIC. Routing
+        queries through this DNS server also has the benefit of blocking many
+        advertising domains by default. AdGuard's default DNS server is open to
+        the public and free to use. We are not affiliated with AdGuard in any
+        way.
+    </p>
+    <p>
+        AdGuard's handling of DNS queries is governed by its own privacy
+        practices. Please review
+        <a href="https://adguard.com/en/privacy.html">
+            AdGuard's Privacy Policy
+        </a>
+        for more information.
+    </p>
+
+    <h2>Information Stored on Your Device</h2>
+    <p>
+        Just Block stores configuration information locally on your device. This
+        may include:
+    </p>
+    <ul>
+        <li>Blocking preferences</li>
+        <li>DNS configuration</li>
+        <li>Enabled or disabled blocklists</li>
+        <li>User-configured blocklist URLs</li>
+        <li>Other application settings</li>
+    </ul>
+    <p>This information is not transmitted to Just Block's servers.</p>
+
+    <h2>Third-Party Blocklists</h2>
+    <p>
+        Just Block allows you to configure URLs from which third-party
+        blocklists can be downloaded. Use this feature at your own risk.
+    </p>
+    <p>
+        When you enable a blocklist, your device connects directly to the
+        configured URL to download the blocklist. These third-party websites are
+        not operated or controlled by Just Block, and their privacy practices
+        are governed by their respective privacy policies.
+    </p>
+    <p>Only use blocklist sources that you trust.</p>
+
+    <h2>Data Sharing and Sale</h2>
+    <p>
+        Just Block does not sell, rent, or share user information with third
+        parties.
+    </p>
+    <p>
+        The App may communicate directly with third-party DNS providers and
+        blocklist hosts when required to provide its functionality. These
+        services may receive information associated with those network requests,
+        such as DNS queries or your device's network address. Their handling of
+        that information is governed by their respective privacy policies.
+    </p>
+
+    <h2>Data Retention and Deletion</h2>
+    <p>Just Block does not retain user data on servers.</p>
+    <p>
+        Application configuration is stored locally on your device. You can
+        remove this information by clearing the App's data or uninstalling the
+        App.
+    </p>
+
+    <h2>Children's Privacy</h2>
+    <p>
+        Just Block does not knowingly collect personal information from
+        children.
+    </p>
+
+    <h2>Changes to This Privacy Policy</h2>
+    <p>
+        We may update this Privacy Policy when the App's functionality or data
+        practices change. Any updated version will be posted at this location
+        with a new "Last updated" date.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+        If you have questions about this Privacy Policy or Just Block's privacy
+        practices, please contact us at:
+        <a href="mailto:justfreesoftwarema@gmail.com">
+            justfreesoftwarema@gmail.com
+        </a>
     </p>
 </Layout>
