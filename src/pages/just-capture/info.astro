@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Just Capture">
+    <img
+        src="/just-capture/logo.png"
+        alt="Just Capture app icon"
+        width="96"
+        height="96"
+        style="border-radius: 20px;"
+    />
+    <h1>Just Capture</h1>
+
+    <p>
+        <strong>Record. Back up. Notify.</strong>
+    </p>
+    <p>
+        Just Capture is a free iPhone app that records video and tries to back
+        it up to your own Google Drive as you record, so your footage isn't
+        stored only on your phone. It can also email the people you choose when
+        you start recording, with a link to watch.
+    </p>
+    <p>
+        We don't run any servers for Just Capture. Your videos go to your own
+        Google Drive, and we never receive them.
+    </p>
+
+    <h2>How It Works</h2>
+    <ol>
+        <li>Sign in with your Google account.</li>
+        <li>
+            Optionally, add the email addresses of the people you want to notify
+            when you start recording.
+        </li>
+        <li>
+            Start recording. The app records in clips of 10, 30, or 60 seconds.
+            When each clip ends, the app tries to upload it to a new folder in
+            your Google Drive.
+        </li>
+        <li>
+            If you added recipients, the app sends them an email from your Gmail
+            account. It includes a link to the Drive folder and, if you choose,
+            the time and your location.
+        </li>
+    </ol>
+    <p>
+        Clips also stay on your phone. If you lose your connection, the app
+        keeps recording and tries the upload again later.
+    </p>
+
+    <h2>Features</h2>
+    <ul>
+        <li>Gapless 1080p video recording, split into short clips</li>
+        <li>Clip uploads to your Google Drive while you record</li>
+        <li>Email notifications with a customizable subject and message</li>
+        <li>Optional location trail for each recording, on your phone and in Drive</li>
+        <li>Optional start time and location in notification emails</li>
+        <li>Replay of your own recordings, whether on your phone or in Drive</li>
+        <li>Replay of Drive folders that other people shared with you by link</li>
+    </ul>
+
+    <h2>Why We Ask for Google Access</h2>
+    <p>
+        Just Capture uses Google Sign-In and asks for these permissions:
+    </p>
+    <ul>
+        <li>
+            <strong>Google Drive (only files the app creates or opens)</strong>:
+            to create recording folders, upload clips, and play them back. The
+            app can't see the rest of your Drive.
+        </li>
+        <li>
+            <strong>Gmail (send email only)</strong>: to send notifications from
+            your account to the people you chose. The app can't read your email.
+        </li>
+        <li>
+            <strong>Your name, email address, and profile photo</strong>: to
+            show which account is signed in and to tell recipients who started
+            recording.
+        </li>
+    </ul>
+
+    <h2>Before You Use It</h2>
+    <ul>
+        <li>
+            <strong>Notifying people shares the recording by link.</strong> When
+            the app emails your recipients, it sets that recording's Drive
+            folder to "Anyone with the link" so that they can open it without
+            requesting access. Anyone who gets the link can watch and, if you
+            save your location, follow your trail, so share it with care.
+            You can change this at any time in Google Drive. If no email is
+            sent, the folder stays private.
+        </li>
+        <li>
+            <strong>Uploads aren't guaranteed.</strong> They depend on your
+            connection and your available Drive storage.
+        </li>
+        <li>
+            <strong>Just Capture doesn't contact emergency services.</strong> In
+            an emergency, call your local emergency number.
+        </li>
+        <li>
+            <strong>Recording laws vary.</strong> You are responsible for
+            following the laws where you record, including any rules on
+            recording other people.
+        </li>
+    </ul>
+
+    <h2>Requirements</h2>
+    <ul>
+        <li>An iPhone running iOS 26.5 or later</li>
+        <li>A Google account</li>
+    </ul>
+    <p>
+        Work and school Google accounts may not allow link sharing. If yours
+        doesn't, the people you notify won't be able to open your videos, so we
+        recommend a personal Google account.
+    </p>
+    <p>Just Capture isn't on the App Store yet.</p>
+
+    <h2>Privacy and License</h2>
+    <p>
+        Read our <a href="/just-capture/privacy-policy">privacy policy</a> for
+        details on how Just Capture handles your data.
+    </p>
+    <p>
+        Just Capture is free and open source under a GPL 3.0 license, and the
+        code is available on{" "}
+        <a href="https://github.com/Just-Free-Software/just-capture-ios">Github</a>.
+    </p>
+</Layout>
