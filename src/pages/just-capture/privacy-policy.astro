@@ -5,14 +5,15 @@ import Layout from "../../layouts/Layout.astro";
 <Layout title="Just Capture Privacy Policy">
     <h1>Just Capture Privacy Policy</h1>
     <p>
-        <em>Last updated: November 4, 2026</em>
+        <em>Last updated: November 5, 2026</em>
     </p>
 
     <p>
-        Just Capture ("the App") is an iPhone app published by Just Free
-        Software, Inc. ("we", "us"). It records video, tries to upload it to your
-        own Google Drive, and can email the people you choose when you start
-        recording.
+        Just Capture ("the App") is an iPhone and Android app published by Just
+        Free Software, Inc. ("we", "us"). It records video, tries to upload it to
+        your own Google Drive, and can email the people you choose when you start
+        recording. This policy covers both versions of the App. Where they differ,
+        we say so.
     </p>
 
     <h2>Summary</h2>
@@ -51,7 +52,9 @@ import Layout from "../../layouts/Layout.astro";
     <p>
         If you've chosen to share analytics with app developers on your iPhone,
         Apple may give us crash reports and usage statistics. Apple presents this
-        data to developers in aggregated or de-identified form.
+        data to developers in aggregated or de-identified form. On Android, Google
+        Play may similarly give us crash reports and usage statistics, depending
+        on your device's settings.
     </p>
 
     <h2>Camera and Microphone</h2>
@@ -74,9 +77,11 @@ import Layout from "../../layouts/Layout.astro";
         With it off, the App doesn't get your location, even if you've given
         permission. With it on, the App gets your location when it opens or you
         grant permission, and continuously for as long as you're recording, whether
-        or not you've set up email notifications. It sends coordinates to Apple's
-        maps service to look up an address, about once a minute at most while
-        recording. If a location is rough, the App shows only the general area.
+        or not you've set up email notifications. To look up an address, it sends
+        coordinates about once a minute at most while recording: on iPhone, to
+        Apple's maps service, and on Android, to your device's geocoding service,
+        which is usually provided by Google. If a location is rough, the App shows
+        only the general area.
 </p>
     <p>
         The App saves a trail of your location for each recording: one point when
@@ -105,11 +110,16 @@ uploaded as a file called <code>location.txt</code> to the recording's
     </p>
     <ul>
         <li>
+            <strong>Email address (<code>userinfo.email</code>)</strong>: used to
+            show which account is signed in. On iPhone, it can also be used to
+            tell recipients who started recording.
+        </li>
+        <li>
             <strong>
-                Name, email address, and profile photo
-                (<code>userinfo.profile</code>, <code>userinfo.email</code>)
+                Name and profile photo, iPhone only (<code>userinfo.profile</code>)
             </strong>: used to show which account is signed in, and to tell
-            recipients who started recording.
+            recipients who started recording. The Android version doesn't request
+            this access.
         </li>
         <li>
             <strong>
@@ -130,8 +140,9 @@ uploaded as a file called <code>location.txt</code> to the recording's
     <p>
         The App's communication with Google takes place directly between your
         device and Google, over encrypted connections. We don't receive or store
-        your Google data or sign-in tokens. Google's sign-in library stores your
-        tokens on your device.
+        your Google data or sign-in tokens. Your tokens are stored on your device:
+        on iPhone by Google's sign-in library, and on Android in the App's private
+        storage.
     </p>
     <p>
         We use Google user data only to provide the App features described in this
@@ -165,8 +176,8 @@ uploaded as a file called <code>location.txt</code> to the recording's
         This doesn't undo copies that someone has already downloaded.
     </p>
     <p>
-        When you sign in, the App also creates a temporary folder called "Just
-        sharing check", tries to share it by link, and then deletes it. This tells
+        When you sign in, the App also creates a temporary folder with "sharing
+        check" in its name, tries to share it by link, and then deletes it. This tells
         the App whether your account allows link sharing, so it can warn you if
         your recipients won't be able to open your videos.
     </p>
@@ -179,10 +190,11 @@ uploaded as a file called <code>location.txt</code> to the recording's
         your Drive runs out of storage.
     </p>
     <p>
-        Depending on your settings, emails may include your name or email address,
-        your subject and message, the recording's start time, your location, and
-        the Drive link. Once sent, emails are under the control of the recipients
-        and their email providers.
+        Emails come from your Gmail address. Depending on your settings, they may
+        include your subject and message, the recording's start time, your
+        location, and the Drive link. On iPhone, the subject may also include your
+        name or email address. Once sent, emails are under the control of the
+        recipients and their email providers.
     </p>
     <p>
         Please make sure the people you add are happy to receive these emails.
@@ -190,8 +202,8 @@ uploaded as a file called <code>location.txt</code> to the recording's
 
     <h2>Folders Shared With You</h2>
     <p>
-        In the Shared tab, you can paste a link to a Drive folder that someone else
-        shared. The App downloads its clips from Google to your phone for replay and
+        In the Shared tab on iPhone, or the Watch tab on Android, you can paste a
+        link to a Drive folder that someone else shared. The App downloads its clips from Google to your phone for replay and
         saves the folder's name and ID on your device. These requests use the App's
         Google API key rather than your Google account. Google can see the request,
         including your device's network address.
@@ -208,12 +220,12 @@ uploaded as a file called <code>location.txt</code> to the recording's
         </li>
         <li>Recipient email addresses, email subject and message</li>
         <li>Notification emails, including any location they contain</li>
-        <li>Folders you've added to the Shared tab</li>
+        <li>Folders you've added to the Shared or Watch tab</li>
         <li>Your settings</li>
     </ul>
     <p>
         This information may be included in your iCloud or computer backups of your
-        iPhone, depending on your settings.
+        iPhone, or in your Android device backups, depending on your settings.
     </p>
 
     <h2>Third-Party Services</h2>
@@ -223,12 +235,13 @@ uploaded as a file called <code>location.txt</code> to the recording's
     </p>
     <ul>
         <li>
-            <strong>Google</strong> (Sign-In, Drive, Gmail):{" "}
+            <strong>Google</strong> (Sign-In, Drive, Gmail and, on Android, address
+            lookup, Google Play, and Android):{" "}
             <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
         </li>
         <li>
-            <strong>Apple</strong> (address lookup through its maps service, App
-            Store, and iOS):{" "}
+            <strong>Apple</strong> (on iPhone: address lookup through its maps
+            service, App Store, and iOS):{" "}
             <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>
         </li>
     </ul>
@@ -237,7 +250,7 @@ uploaded as a file called <code>location.txt</code> to the recording's
     <p>
         We don't sell, rent, or share your information, because it doesn't reach us.
         The App shares information only as described in this policy, in order to
-        provide its features: with Google and Apple, with the recipients you choose,
+        provide its features: with Google, with Apple on iPhone, with the recipients you choose,
         and with anyone who has the link to a shared recording.
     </p>
 
@@ -249,7 +262,7 @@ uploaded as a file called <code>location.txt</code> to the recording's
         <li>
             <strong>On your phone</strong>: delete a recording in the App's My Clips
             tab to remove its clips and any pending uploads or emails. Removing a
-            folder from the Shared tab deletes its downloaded clips. Uninstalling
+            folder from the Shared or Watch tab deletes its downloaded clips. Uninstalling
             the App removes the App's data from your phone.
         </li>
         <li>
@@ -273,7 +286,7 @@ uploaded as a file called <code>location.txt</code> to the recording's
 
     <h2>Security</h2>
     <p>
-        The App connects to Google and Apple over encrypted connections. No method
+        The App connects to Google and, on iPhone, Apple over encrypted connections. No method
         of storage or transmission is completely secure. Your phone's passcode and
         your Google account's security settings also help protect your data.
     </p>
